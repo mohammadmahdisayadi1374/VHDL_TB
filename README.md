@@ -40,4 +40,12 @@ data = handler.reader(filenames = filenames, verbose = True, datatype = datatype
 # depends on your data, datatype can be float32 or int16
 ```
 
+## 2. Generate testbench 
+
+copy the testbench exited in the /sim_1/new/VHDL_TB to your testbench path if it defferent, and then change it in a way that solve your problem. 
+
+### 3. Adding File Reader and File writer ip cores
+
+
+
 
