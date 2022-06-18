@@ -22,9 +22,14 @@ steps of using this repo came in the following list:
   6. compare the result. 
 
 
+##1. Customize input files
 ```
-function(i, o) 
-print(2)
+from openTB import openTB as tb2 # the 2 inspired of cv2 :)
+import numpy as np 
+handler = tb2.FileHandler(foldername = "<PROJECT_MAIN_FOLDER_NAME>", projectname = "PROJECT_NAME")
+# for example if your project path be as follow : 
+# <project path>/<foldername>/<project_name>.srcs
+
 ```
 
 
