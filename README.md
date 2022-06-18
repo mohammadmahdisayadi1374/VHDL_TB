@@ -61,6 +61,7 @@ for port maping it you have to pay attention to following hints:
   2. real and imag file names are the variables with string type. the lenght of the string belong to how many file you have for testing your core, but the length of        vaiable name must have be equal to the name of the added text file to the vivado and it is a fixed number which is equal to 26 chars.
   3. depends on your data type the input can be array or std_logiC_vector and its bit widths can be 16, 32, or 64 bits. 
 
-
+## 2.2 Adding file writer 
+the same with the adding file reader to your project, your can port map the filewriter ip to the project, but notice that in the filename portmaping your string variable must contain all the path directory as you can see the VHDL_TB which is in the sim_1/new dir.
 
 
