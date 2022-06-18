@@ -22,7 +22,7 @@ steps of using this repo came in the following list:
   6. compare the result. 
 
 
-##1. Customize input files
+## 1. Customize input files
 ```
 from openTB import openTB as tb2 # the 2 inspired of cv2 :)
 import numpy as np 
