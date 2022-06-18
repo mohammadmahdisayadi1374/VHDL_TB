@@ -34,7 +34,7 @@ datatype_buffer = ["float32", "int16"]
 file_reim = ["real", "imag"]
 data_num = 4
 data_size = int(1e3)
-filenames = [handler.filenamegen(filetype = "python", inouttype = "output", filedescription = "pytflo"
+filenames = [handler.filenamegen(filetype = "python", inouttype = "output", filedescription = "xxxxxx"
 , filenumber = i//2, filereim = file_reim[i%2], codec = ".txt", help = True) for i in range(data_num)]
 # by study the help of file name generator you can see the properties of it 
 data = handler.writer(datadict = data_dict, filenames = filenames, datatype = datatype_buffer[0])
@@ -72,7 +72,24 @@ in this section you are able to read the file which python is generated or the f
 for reading files using python follow the following codes: 
 
 ````
-hello world
+atatype_buffer = ["float32", "int16"]
+file_reim = ["real", "imag"]
+data_num = 4
+data_size = int(1e3)
+filenames = [handler.filenamegen(filetype = "python", inouttype = "output", filedescription = "xxxxxx"
+, filenumber = i//2, filereim = file_reim[i%2], codec = ".txt", help = True) for i in range(data_num)]
+data = handler.reader(filenames = filenames, verbose = True, datatype = datatype_buffer[0])
 ````
+
+# FROM NOW ON YOU HAVE FOLLOWING ABILITIES
+
+  1. ability to connect your python project to you vivado test bench project
+  2. ability to compare generated data with input data, and generate python data in the python ides which is more accurate.
+  3. you can extend the code, and the write belive that the propagating this file can be start of a big usefull software for hardware programmers like me.
+
+
+
+
+
 
 
