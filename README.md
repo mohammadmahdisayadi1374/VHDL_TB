@@ -14,15 +14,16 @@ python -m pip install openTB==0.0.3
 
 steps of using this repo came in the following list: 
 
-  1. clone the repo
-  2. customize the input file using python file (exist in PyFiles)
-  3. generate a suitable testbench based on the testbench which exist in PRJ_NAME.srcs/sim_1/new/DUT_TB
-  4. writing the generated data by vivado to a file 
-  5. reading the inputs of the test bench and the output of the vivado using reader in python package. 
-  6. compare the result. 
+  1. customize the input file using python file (exist in PyFiles)
+  2. generate a suitable testbench based on the testbench which exist in PRJ_NAME.srcs/sim_1/new/DUT_TB
+  3. writing the generated data by vivado to a file 
+  4. reading the inputs of the test bench and the output of the vivado using reader in python package. 
+  5. compare the result. 
 
 
 ## 1. Customize input files
+in this section you have to generate your data in the python and write theme to some text files in the Testfile directory. 
+following codes show you how you can write your data into a file in testfile directory.
 ```
 from openTB import openTB as tb2 # the 2 inspired of cv2 :)
 import numpy as np 
@@ -36,7 +37,7 @@ data_size = int(1e3)
 filenames = [handler.filenamegen(filetype = "python", inouttype = "output", filedescription = "pytflo"
 , filenumber = i//2, filereim = file_reim[i%2], codec = ".txt", help = True) for i in range(data_num)]
 # by study the help of file name generator you can see the properties of it 
-data = handler.reader(filenames = filenames, verbose = True, datatype = datatype_buffer[0])
+data = handler.writer(datadict = data_dict, filenames = filenames, datatype = datatype_buffer[0])
 # depends on your data, datatype can be float32 or int16
 ```
 
@@ -63,5 +64,7 @@ for port maping it you have to pay attention to following hints:
 
 ## 2.2 Adding file writer 
 the same with the adding file reader to your project, your can port map the filewriter ip to the project, but notice that in the filename portmaping your string variable must contain all the path directory as you can see the VHDL_TB which is in the sim_1/new dir.
+
+
 
 
