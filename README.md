@@ -22,6 +22,9 @@ steps of using this repo came in the following list:
   6. compare the result. 
 
 
-
+```
+function(i, o) 
+print(2)
+```
 
 
